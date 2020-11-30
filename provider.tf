@@ -9,6 +9,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   ami           = "ami-0528a5175983e7f28"
   instance_type = "t2.micro"
+  key_name = "jenkins-pipeline"
 
   tags = {
     Name = "HelloWorld"
